@@ -135,9 +135,23 @@ function (_Component) {
     key: "componentDidMount",
     // tracks the size of the component through window resize events
     value: function componentDidMount() {
+      var _this$props = this.props,
+          currentMonth = _this$props.currentMonth,
+          currentYear = _this$props.currentYear;
+
       this._handleWindowResize();
 
       window.addEventListener('resize', this._handleWindowResize);
+      var updatedDate = (0, _moment["default"])();
+      if (currentYear) updatedDate.set({
+        year: currentYear
+      });
+      if (currentMonth) updatedDate.set({
+        month: currentMonth
+      });
+      (currentYear || currentMonth) && this.setState({
+        date: updatedDate
+      });
       this.props.onMonthChange((0, _moment["default"])(this.state.date).startOf('month').toISOString());
     }
   }, {
@@ -153,15 +167,15 @@ function (_Component) {
       var _this$state = this.state,
           date = _this$state.date,
           smallCalendar = _this$state.smallCalendar;
-      var _this$props = this.props,
-          renderDay = _this$props.renderDay,
-          style = _this$props.style,
-          titleTextStyle = _this$props.titleTextStyle,
-          dayNameTextStyle = _this$props.dayNameTextStyle,
-          dayTextStyle = _this$props.dayTextStyle,
-          activeDayStyle = _this$props.activeDayStyle,
-          inactiveDayStyle = _this$props.inactiveDayStyle,
-          width = _this$props.width;
+      var _this$props2 = this.props,
+          renderDay = _this$props2.renderDay,
+          style = _this$props2.style,
+          titleTextStyle = _this$props2.titleTextStyle,
+          dayNameTextStyle = _this$props2.dayNameTextStyle,
+          dayTextStyle = _this$props2.dayTextStyle,
+          activeDayStyle = _this$props2.activeDayStyle,
+          inactiveDayStyle = _this$props2.inactiveDayStyle,
+          width = _this$props2.width;
       return _react["default"].createElement(Container, {
         ref: function ref(_ref) {
           return _this2.calendar = _ref;
@@ -206,7 +220,9 @@ _defineProperty(CalendarMonthView, "propTypes", {
   dayTextStyle: _propTypes["default"].object,
   activeDayStyle: _propTypes["default"].object,
   inactiveDayStyle: _propTypes["default"].object,
-  onMonthChange: _propTypes["default"].func
+  onMonthChange: _propTypes["default"].func,
+  currentMonth: _propTypes["default"].number,
+  currentYear: _propTypes["default"].number
 });
 
 _defineProperty(CalendarMonthView, "defaultProps", {
