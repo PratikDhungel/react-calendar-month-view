@@ -1,15 +1,15 @@
 {
   "name": "@pratikdhungel/react-calendar-month-view",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Monthly Calendar React Component, inspired by a Squarespace calendar theme. Forked and updated for personal requirements",
   "main": "dist/index.js",
   "license": "MIT",
   "author": "Alwyn Tan <alwyntan97@gmail.com> (https://github.com/alwyntan)",
   "peerDependencies": {
+    "moment": "^2.29.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
-    "moment": ">=2.24.0",
-    "styled-components": "4.3.1"
+    "styled-components": "^4.3.1"
   },
   "homepage": "https://github.com/alwyntan/react-calendar-month-view",
   "repository": {
@@ -38,7 +38,7 @@
     "file-loader": "^4.0.0",
     "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "style-loader": "^0.23.1",
