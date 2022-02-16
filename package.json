@@ -1,6 +1,6 @@
 {
   "name": "@pratikdhungel/react-calendar-month-view",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Monthly Calendar React Component, inspired by a Squarespace calendar theme. Forked and updated for personal requirements",
   "main": "dist/index.js",
   "license": "MIT",
