@@ -45,7 +45,7 @@ import CalendarMonthView from 'react-calendar-month-view';
 
 class App extends Component {
   // date is given as an ISO-8601 string
-  _renderDay = date => {
+  _renderDay = (date) => {
     // return a component to render for the given date
   };
 
@@ -84,16 +84,18 @@ render() {
 
 ### Props
 
-| prop             | type     | default | description                                                                                                                          |
-| ---------------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| width            | string   | "90%"   | Specifies the width of the calendar (height is dynamically set and therefore cannot be customized). Examples. "500px", "90vw", "90%" |
-| renderDay        | function | null    | Callback used to render a given day                                                                                                  |
-| onMonthChange    | function | null    | Callback that is fired when the month is changed (Fires once on component mount)                                                     |
-| titleTextStyle   | object   | null    | Custom styles for the title text                                                                                                     |
-| dayNameTextStyle | object   | null    | Custom styles for the day names (header row of the calendar)                                                                         |
-| dayTextStyle     | object   | null    | Custom styles for the numbers that correspond to the days on the calendar                                                            |
-| activeDayStyle   | object   | null    | Custom styles for the calendar tile corresponding to the current day                                                                 |
-| inactiveDayStyle | object   | null    | Custom styles for the calendar tile corresponding days that are not the current day                                                  |
+| prop             | type     | default | description                                                                                                                                                |
+| ---------------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| width            | string   | "90%"   | Specifies the width of the calendar (height is dynamically set and therefore cannot be customized). Examples. "500px", "90vw", "90%"                       |
+| renderDay        | function | null    | Callback used to render a given day                                                                                                                        |
+| onMonthChange    | function | null    | Callback that is fired when the month is changed (Fires once on component mount)                                                                           |
+| titleTextStyle   | object   | null    | Custom styles for the title text                                                                                                                           |
+| dayNameTextStyle | object   | null    | Custom styles for the day names (header row of the calendar)                                                                                               |
+| dayTextStyle     | object   | null    | Custom styles for the numbers that correspond to the days on the calendar                                                                                  |
+| activeDayStyle   | object   | null    | Custom styles for the calendar tile corresponding to the current day                                                                                       |
+| inactiveDayStyle | object   | null    | Custom styles for the calendar tile corresponding days that are not the current day                                                                        |
+| currentMonth     | number   | null    | Specify the current month to be displayed in the calendar on component mount. Value should be based on moment's set method i.e 0 => Jan, 1 = Feb and so on |
+| currentYear      | number   | null    | Specify the current year to be displayed in the calendar on component mount.                                                                               |
 
 ### Prop Functions:
 
@@ -104,7 +106,7 @@ render() {
 Example:
 
 ```jsx
-const renderDay = isoDate => {
+const renderDay = (isoDate) => {
   return <div> ... </div>;
 };
 ```
@@ -116,7 +118,7 @@ const renderDay = isoDate => {
 Example:
 
 ```jsx
-const onMonthChange = startDate => {
+const onMonthChange = (startDate) => {
   // eg. retrieve data from gcal
 };
 ```

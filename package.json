@@ -1,7 +1,7 @@
 {
   "name": "@pratikdhungel/react-calendar-month-view",
   "version": "0.6.1",
-  "description": "Monthly Calendar React Component, inspired by a Squarespace calendar theme",
+  "description": "Monthly Calendar React Component, inspired by a Squarespace calendar theme. Forked and updated for personal requirements",
   "main": "dist/index.js",
   "license": "MIT",
   "author": "Alwyn Tan <alwyntan97@gmail.com> (https://github.com/alwyntan)",
@@ -12,10 +12,10 @@
   "homepage": "https://github.com/alwyntan/react-calendar-month-view",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alwyntan/react-calendar-month-view.git"
+    "url": "https://github.com/PratikDhungel/react-calendar-month-view"
   },
   "bugs": {
-    "url": "https://github.com/alwyntan/react-calendar-month-view/issues"
+    "url": "https://github.com/PratikDhungel/react-calendar-month-view/issues"
   },
   "keywords": [
     "react",
@@ -44,6 +44,10 @@
     "webpack": "^4.34.0",
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.2"
+  },
+  "peerDependencies": {
+    "moment": ">=2.24.0",
+    "styled-components": "4.3.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
